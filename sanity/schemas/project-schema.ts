@@ -22,8 +22,8 @@ const projectSchema = {
             of: [{ type: "block" }],
         },
         {
-            name: "categories",
-            title: "Categories",
+            name: "category",
+            title: "Category",
             type: "string",
             options: {
                 list: [
