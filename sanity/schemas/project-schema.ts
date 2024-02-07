@@ -22,16 +22,36 @@ const projectSchema = {
             of: [{ type: "block" }],
         },
         {
-            name: "screenshot",
-            title: "Project Screenshot (wide 16:9)",
+            name: "categories",
+            title: "Categories",
+            type: "string",
+            options: {
+                list: [
+                    { title: 'Boycott', value: 'boycott' },
+                    { title: 'Education', value: 'education' },
+                    { title: 'Legacy Media', value: 'legacy media' },
+                    { title: 'Social Media', value: 'social media' },
+                    { title: 'Documentation', value: 'documentation' },
+                    { title: 'Tech', value: 'tech' },
+                    { title: 'Advocacy', value: 'advocacy' },
+                    { title: 'Charity', value: 'charity' },
+                    { title: 'Legal', value: 'legal' },
+                    { title: 'Human Rights', value: 'human rights' },
+                    { title: 'Anti-Zionist Jews', value: 'Anti-Zionist Jews' },
+                ],
+            },
+        },
+        {
+            name: "logo",
+            title: "Project Logo (square 1:1)",
             type: "image",
             options: {
                 accept: "image/png, image/jpeg, image/jpg",
             },
         },
         {
-            name: "logo",
-            title: "Project Logo (square 1:1)",
+            name: "screenshot",
+            title: "Project Screenshot (wide 16:9)",
             type: "image",
             options: {
                 accept: "image/png, image/jpeg, image/jpg",
