@@ -1,6 +1,9 @@
+import { Providers } from "@/providers";
 import "@/styles/globals.css";
+import { ColorSchemeScript } from "@mantine/core";
 
 import { Inter } from "next/font/google";
+import "@mantine/core/styles.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +23,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>{children}</body>
+      <head>
+        <title>{metadata.title}</title>
+        <ColorSchemeScript />
+      </head>
+      <body className={`font-sans ${inter.variable}`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
